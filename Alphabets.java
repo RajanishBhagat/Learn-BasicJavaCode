@@ -1,0 +1,30 @@
+class Alphabets
+{
+   public static void main(String args[])
+   {
+      char ch;
+ 
+      for (ch = 'a'; ch <= 'z'; ch++)
+         System.out.println(ch);
+   }
+}
+
+
+/*
+Printing alphabets using a while loop (Only the body of the main method is shown):
+
+char c = 'a';
+ 
+while (c <= 'z') {
+  System.out.println(c);
+  c++;
+}
+Using a do while loop:
+
+char c = 'A';
+ 
+do {
+  System.out.println(c);
+  c++;
+} while (c <= 'Z');
+*/
