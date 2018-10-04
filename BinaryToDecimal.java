@@ -1,3 +1,5 @@
+// Created By Rajanish Bhagat
+
 import java.util.Scanner;
 class BinaryToDecimal {
     public static void main(String args[]){

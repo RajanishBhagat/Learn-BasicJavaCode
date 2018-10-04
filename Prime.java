@@ -1,3 +1,4 @@
+// Created By Rajanish Bhagat
 
 /*Prime no : 2,3,5,7,11,13,17 { Divided by only 1 and self, not divide by any another number}
 Algo :  number(no)=11

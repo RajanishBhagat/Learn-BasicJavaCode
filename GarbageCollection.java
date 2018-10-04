@@ -1,3 +1,5 @@
+// Created By Rajanish Bhagat
+
 /*Java program to perform garbage collection: Free memory in Java virtual machine is printed and then garbage collection is done using gc method of RunTime class, freeMemory method returns the amount of free memory in JVM, getRunTime method is used to get reference of current RunTime object.*/
 
 import java.util.*;

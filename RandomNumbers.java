@@ -1,3 +1,5 @@
+// Created By Rajanish Bhagat
+
 /* Java program to generate random numbers: This code generates random numbers in range 0 to 100 (both inclusive). */
 
 import java.util.*;
