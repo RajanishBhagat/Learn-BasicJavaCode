@@ -15,7 +15,7 @@ class ReverseString
      
       int length = original.length();
      
-      for (int i = length - 1 ; i >= 0 ; i--)
+      for (int i = length  ; i >= 1 ; i--)
          reverse = reverse + original.charAt(i);
          
       System.out.println("Reverse of the string: " + reverse);
