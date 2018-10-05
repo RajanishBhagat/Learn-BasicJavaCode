@@ -9,6 +9,7 @@ class Notepad {
  
     try {
       rs.exec("gedit");
+     //rs.exec("notepad");
     }
     catch (IOException e) {
       System.out.println(e);
