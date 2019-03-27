@@ -24,3 +24,18 @@ class ForLoop {
     }
   }
 }
+
+
+Infinite loop using while 
+class B
+{
+public static void main (String args [])
+{
+while(true)
+{
+System.out.println("Rajanish Bhagat");
+}
+}
+}
+
+Output :  Rajanish Bhagat will print infinit time 
