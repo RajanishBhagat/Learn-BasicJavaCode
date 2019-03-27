@@ -258,7 +258,108 @@ String.compareTo();  ==>> (Compares this String to another Object) Syntax:  int 
 String.equals();     ==>> Syntax: str1.equals(str2);
 String.equalsIgnoreCase()  ==>>  Syntax: boolean str2.equalsIgnoreCase(str1);
 String.concat();  ==>    Concatenates the specified string to the end of this string.
--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+split method : 
+
+String str = "My name is Chaitanya";
+String[] arr = str.split(" "); //splitting string based on whitespace
+
+  
+String s1="java string split method by javatpoint";  
+String[] words=s1.split("\\s");//splits the string based on whitespace  
+
+System.out.println("split(String regex, int limit) with limit=2:");
+String str = new String("28/12/2013");
+String array2[]= str.split("/", 2);
+
+Output : 
+28
+12/2013
+
+System.out.println("split(String regex, int limit) with limit=0:");
+String array3[]= str.split("/", 0);
+Output : Normal Spliting basis of /
+
+
+Negative limit says that the method returns substrings with no limit
+System.out.println("split(String regex, int limit) with limit=-5:");
+String array4[]= str.split("/", -5);
+Output : Normal Spliting basis of /
+
+Java String split with multiple delimiters (special characters)
+String s = " ,ab;gh,bc;pq#kk$bb";
+String[] str = s.split("[,;#$]");
+================================================================================================
+Replace keyword in  Java : 
+Java String replaceFirst() example
+Java program to replace first occurrence of a given string or regex in string with a new substring. 
+
+String str = "Java says hello world. Java String tutorial";         
+String newStr = str.replaceFirst("Java", "JAVA");     //Replace first occurrence of substring "Java" with "JAVA"
+String regexResult = str.replaceFirst("[a]", "A");    ////Replace first occurrence of substring "a" with "A" 
+System.out.println(newStr);
+System.out.println(regexResult);
+
+Output : 
+JAVA says hello world. Java String tutorial
+JAva says hello world. Java String tutorial
+
+
+Java String replaceAll() example
+String str = "how to do in java provides java tutorials";
+String newStr = str.replaceAll("java", "scala");
+
+Output : how to do in scala provides scala tutorials
+
+Example : 
+String str = "how to do in java provides java tutorials";
+String newStr = str.replaceAll("\\s", "");         
+System.out.println(newStr);
+Output : howtodoinjavaprovidesjavatutorials
+
+========================================================================================================
+Java String startsWith() example
+startsWith() method is overloaded method and has two forms:
+
+boolean startsWith(String str) – returns true if the str is a prefix of the String.
+boolean startsWith(String str, int fromIndex) – returns true if the String begins with str starting from the specified index fromIndex.
+
+Example : 
+String blogName = "howtodoinjava.com";
+System.out.println( blogName.startsWith("how") );               //true         
+System.out.println( "howtodoinjava.com".startsWith("howto") );  //true         
+System.out.println( "howtodoinjava.com".startsWith("hello") );  //false
+System.out.println( blogName.startsWith("howto", 0) );           //true
+System.out.println( "howtodoinjava.com".startsWith("howto", 2) ); //false 
+
+Java String endsWith() method example
+Java String endsWith() method is used to check the suffix of the string. It verifies if given string ends with argument string or not.
+
+Example : 
+String blogName = "howtodoinjava.com";
+System.out.println( blogName.endsWith("com") );  //true         
+System.out.println( blogName.endsWith("net") );  //false
+
+====================================================================
+concat method example : 
+ System.out.println("Hello".concat(" world")); // Hello world
+
+
+Java String hashCode() method returns the hash code for the String.
+String blogName = "howtodoinjava.com";
+System.out.println( blogName.hashCode() );         // 1894145264
+System.out.println( "hello world".hashCode() );    // 1794106052
+
+Java String contains() example
+
+System.out.println("Hello World".contains("Hello"));    //true
+System.out.println("Hello World".contains("World"));    //true 
+System.out.println("Hello World".contains("WORLD"));    //false - case-sensitive         
+System.out.println("Hello World".contains("Java"));     //false 
+
+====================================================================================================================
+
 Singleton Class => In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
 Normal class vs Singleton class: Difference in normal and singleton class in terms of instantiation is that, For normal class we use constructor, whereas for singleton class we use getInstance() method.
 ======================================================================
