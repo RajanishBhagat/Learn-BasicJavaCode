@@ -86,4 +86,30 @@ System.out.println(array[i]);
 }
 }
 
+/*#################################################################################################################*/
+Calculate the Average of the array element.
+  
+class TestArray
+{
+int sum = 0;
+
+ void  average()
+  {
+    int [] arr = {9,12,24,43};
+
+     for ( int i = 0; i<arr.length; i++)
+      sum = sum + arr[i];
+
+      float  average  = sum/arr.length;
+     System.out.println("Sum is " +sum +"and Average is " +average);
+  }
+public static void main(String args[])
+{
+  TestArray obj = new TestArray();
+       obj.average();
+
+}
+}
+
+
 
