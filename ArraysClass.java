@@ -69,3 +69,21 @@ Number = 4
 Number = 6
 Number = 9
 */
+
+######################################################################################################################
+import java.util.*;
+
+class TestArray
+{
+public static void main(String args[])
+{
+int [] array = new int[]{9,12,24,43};
+
+for ( int i=0;i<array.length;i++)
+{
+System.out.println(array[i]);
+}
+}
+}
+
+
