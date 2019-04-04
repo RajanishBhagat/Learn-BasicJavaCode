@@ -25,3 +25,39 @@ class GetCurrentDateAndTime
       System.out.println("Current time is  "+hour+" : "+minute+" : "+second);
    }
 }      
+
+
+/*--------------------Another way to get Date and time in different format---------------------------------------------------*/
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+class DateFormat
+{
+public static void main(String args [])
+{
+ Date dnow = new Date();
+ SimpleDateFormat ft1 = new SimpleDateFormat("dd/MM/yyyy");
+ SimpleDateFormat ft2 = new SimpleDateFormat("E");
+ SimpleDateFormat ft3 = new SimpleDateFormat("hh:mm:ss a");
+ SimpleDateFormat ft4 = new SimpleDateFormat("MMM");
+
+
+ System.out.println(dnow);
+ System.out.println("Current date is " + ft1.format(dnow));
+ System.out.println("Today  is " + ft2.format(dnow));
+ System.out.println("Current time is " + ft3.format(dnow));
+ System.out.println("Current Month name is " + ft4.format(dnow));
+}
+}
+
+/*
+root@Cav-30-48:/home/cavisson/work/rajanish/java# javac  DateFormat.java 
+root@Cav-30-48:/home/cavisson/work/rajanish/java# java  DateFormat 
+Thu Apr 04 13:29:34 IST 2019
+Current date is 04/04/2019
+Today  is Thu
+Current time is 01:29:34 PM
+Current Month name is Apr
+
+*/
+~              
