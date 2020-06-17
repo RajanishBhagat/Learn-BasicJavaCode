@@ -1,5 +1,12 @@
 // Java prorgam to count frequencies of 
 // characters in string using Hashmap 
+/**
+*Declare a Hashmap in Java of {char, int}.
+*Traverse in the string, check if the Hashmap already contains the traversed character or not.
+*If it is present, then increase its count using get() and put() function in Hashmap.
+*Once the traversal is completed, traverse in the Hashmap and print the character and its frequency.
+*Below is the implementation of the above approach.
+*/
 import java.io.*; 
 import java.util.*; 
 public class OccurenceOfCharInString { 
