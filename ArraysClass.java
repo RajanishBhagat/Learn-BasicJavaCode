@@ -111,5 +111,80 @@ public static void main(String args[])
 }
 }
 
+#####################################################################################################################
+
+/**Sorting an array
+*Compare the first two elements of the array
+*If the first element is greater than the second swap them.
+*Then, compare 2nd and 3rd elements if the second element is greater than the 3rd swap them.
+*Repeat this till the end of the array.
+*After sorting an array print the 1st element from the end of the array.
+*/
+ 
+public class LargestNumberInAnArray {
+   public static void main(String args[]){
+      int temp, size;
+      int array[] = {10, 20, 25, 63, 96, 57};
+      size = array.length;
+      
+      for(int i = 0; i<size; i++ ){
+         for(int j = i+1; j<size; j++){
+             
+            if(array[i]>array[j]){                  //this line of code only used to make ascending order.  if i will write like  if(array[i]<array[j])  work for descending order 
+               temp = array[i];
+               array[i] = array[j];
+               array[j] = temp;
+            }
+              
+         }
+
+         System.out.println(array[i]);
+      }
+      System.out.println("largest element is:: "+array[size-1]);
+      
+      System.out.println("Second largest element is:: "+array[size-2]);
+      
+       System.out.println("shortest  element is:: "+array[0]);
+       
+        System.out.println("shortest  element is:: "+array[1]);
+   }
+}
+
+Output :
+
+
+$javac LargestNumberInAnArray.java
+$java -Xmx128M -Xms16M LargestNumberInAnArray
+10
+20
+25
+57
+63
+96
+largest element is:: 96
+Second largest element is:: 63
+shortest  element is:: 10
+shortest  element is:: 20
+
+
+//Another solution: You can also sort the elements of the given array using the sort method of the java.util.Arrays class then,
+ print the 1st element from the end of the array.
+
+import java.util.Arrays;
+public class LargestNumberSample {
+   public static void main(String args[]){
+      int array[] = {10, 20, 25, 63, 96, 57};
+      int size = array.length;
+      Arrays.sort(array);
+      System.out.println("sorted Array ::"+Arrays.toString(array));
+      System.out.println("largest element is ::" + array[size-1]);
+   }
+}
+
+$javac LargestNumberSample.java
+$java -Xmx128M -Xms16M LargestNumberSample
+sorted Array ::[10, 20, 25, 57, 63, 96]
+largest element is ::96
+
 
 
