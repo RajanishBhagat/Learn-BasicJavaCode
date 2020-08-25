@@ -6,29 +6,35 @@ Algo :  number(no)=11
 2. 11/2,3,4,5   (now we are dividing from all the number from 2 to 5 }
 */
 
-import java.util.*;
-public class Prime {
+package interv;
 
-    public static void main(String[] args) {
-    
-    Scanner in = new Scanner(System.in);
-    System.out.println("Please Enter a number");
-     
-        int num = in.nextInt();
-        boolean flag = false;
-        for(int i = 2; i <= num/2; ++i)
-        {
-            // condition for nonprime number
-            if(num % i == 0)
-            {
-                flag = true;
-                break;
-            }
-        }
+import java.util.Scanner;  
 
-        if (!flag)
-            System.out.println(num + " is a prime number.");
-        else
-            System.out.println(num + " is not a prime number.");
-    }
-}
+import java.util.Scanner;  
+  
+public class PrimeExample {  
+  
+   public static void main(String[] args) {  
+       Scanner s = new Scanner(System.in);  
+       System.out.print("Enter a number : ");  
+       int n = s.nextInt();  
+       if (isPrime(n)) {  
+           System.out.println(n + " is a prime number");  
+       } else {  
+           System.out.println(n + " is not a prime number");  
+       }  
+   }  
+  
+   public static boolean isPrime(int n) {  
+       if (n <= 1) {  
+           return false;  
+       }  
+       
+       for (int i = 2; i < n/2; i++) {  
+           if (n % i == 0) {  
+               return false;  
+           }  
+       }  
+       return true;  
+   }  
+}  
