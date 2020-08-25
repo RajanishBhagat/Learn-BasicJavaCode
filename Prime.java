@@ -6,9 +6,8 @@ Algo :  number(no)=11
 2. 11/2,3,4,5   (now we are dividing from all the number from 2 to 5 }
 */
 
+//Prime Number Program in Java
 package interv;
-
-import java.util.Scanner;  
 
 import java.util.Scanner;  
   
@@ -31,6 +30,40 @@ public class PrimeExample {
        }  
        
        for (int i = 2; i < n/2; i++) {  
+           if (n % i == 0) {  
+               return false;  
+           }  
+       }  
+       return true;  
+   }  
+}  
+
+
+//Find prime numbers between two numbers 
+
+
+package interv;
+
+import java.util.Scanner;  
+public class PrimeExample {  
+   public static void main(String[] args) {  
+       Scanner s = new Scanner(System.in);  
+       System.out.print("Enter the first number : ");  
+       int start = s.nextInt();  
+       System.out.print("Enter the second number : ");  
+       int end = s.nextInt();  
+       System.out.println("List of prime numbers between " + start + " and " + end);  
+       for (int i = start; i <= end; i++) {  
+           if (isPrime(i)) {  
+               System.out.println(i);  
+           }  
+       }  
+   }  
+   public static boolean isPrime(int n) {  
+       if (n <= 1) {  
+           return false;  
+       }  
+       for (int i = 2; i <= Math.sqrt(n); i++) {  
            if (n % i == 0) {  
                return false;  
            }  
