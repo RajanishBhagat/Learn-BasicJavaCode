@@ -26,6 +26,13 @@ class ForLoop {
 }
 
 
+Write the program to increment with 3 using  for loop ?
+      for(int i=1;i<=10;i+=3)
+		{
+			 System.out.println(i);    //1 4 7 10
+		}
+
+
 Infinite loop using while 
 class B
 {
