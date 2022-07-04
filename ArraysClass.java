@@ -212,3 +212,83 @@ $javac DuplicateElement.java
 $java -Xmx128M -Xms16M DuplicateElement
 Duplicate element is = 25
 
+============================================================================================================================================================
+// Take the value from input using Scanner class in the Array
+
+package arraydemo;
+
+import java.util.Scanner;
+
+public class SingleDimensionArrayDemo {
+
+	public static void main(String[] args) {
+		  
+		int n;  
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter the number of elements you want to store: ");  
+		  
+		    n=sc.nextInt();  
+		 
+		int[] array = new int[n];  
+		System.out.println("Enter the elements of the array: ");  
+		for(int i=0; i<n; i++)  
+		{  
+		 
+		array[i]=sc.nextInt();  
+		}  
+		System.out.println("Array elements are: ");  
+
+		for (int i=0; i<n; i++)   
+		{  
+		System.out.println(array[i]);  
+		}  
+		 
+	}
+  
+========================================================================================================================================================
+#MultiDimension Array :
+
+package arraydemo;
+
+import java.util.Scanner;
+
+public class ScannerArray {
+
+	public static void main(String[] args) {
+		   
+	
+		int i,j;
+		
+		Scanner sc=new Scanner(System.in);   
+		System.out.print("Enter the number of rows: ");   
+		  
+		int r = sc.nextInt();   
+		System.out.print("Enter the number of columns: ");   
+  
+		int c = sc.nextInt();   
+		
+		int array[][] = new int[r][c];   
+		 
+		System.out.println("Enter the elements of the array: ");   
+		
+		for (i = 0; i < r; i++)   
+		{
+		for ( j = 0; j < c; j++) 
+		{
+		array[i][j] = sc.nextInt(); 
+		}
+		System.out.println();  
+		}
+		
+		System.out.println("Elements of the array are: ");   
+		for (i = 0; i < r; i++)   
+		{   
+		for (j = 0; j < c; j++)   
+		{
+		System.out.print(array[i][j] + " ");   
+		}
+		System.out.println();   
+		}   
+		}   
+
+	}
