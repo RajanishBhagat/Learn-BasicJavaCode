@@ -7,67 +7,72 @@ Algo :  number(no)=11
 */
 
 //Prime Number Program in Java
-package interv;
 
-import java.util.Scanner;  
-  
-public class PrimeExample {  
-  
-   public static void main(String[] args) {  
-       Scanner s = new Scanner(System.in);  
-       System.out.print("Enter a number : ");  
-       int n = s.nextInt();  
-       if (isPrime(n)) {  
-           System.out.println(n + " is a prime number");  
-       } else {  
-           System.out.println(n + " is not a prime number");  
-       }  
-   }  
-  
-   public static boolean isPrime(int n) {  
-       if (n <= 1) {  
-           return false;  
-       }  
-       
-       for (int i = 2; i < n/2; i++) {  
-           if (n % i == 0) {  
-               return false;  
-           }  
-       }  
-       return true;  
-   }  
-}  
+package basiccodespack;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+				
+      Scanner sc = new Scanner(System.in);
+	    int num = sc.nextInt(); 
+	  
+	    boolean flag = false;
+	    for (int i = 2; i <= num / 2; i++) 
+      {
+	      if (num % i == 0)              // condition for nonprime number
+        {
+	        flag = true;
+	        break;
+	      }
+	    }
+
+	    if (!flag)
+	      System.out.println(num + " is a prime number.");
+	    else
+	      System.out.println(num + " is not a prime number.");
+	}
+
+}
+
 
 
 //Find prime numbers between two numbers 
 
+package basiccodespack;
 
-package interv;
+import java.util.Scanner;
 
-import java.util.Scanner;  
-public class PrimeExample {  
-   public static void main(String[] args) {  
-       Scanner s = new Scanner(System.in);  
-       System.out.print("Enter the first number : ");  
-       int start = s.nextInt();  
-       System.out.print("Enter the second number : ");  
-       int end = s.nextInt();  
-       System.out.println("List of prime numbers between " + start + " and " + end);  
-       for (int i = start; i <= end; i++) {  
-           if (isPrime(i)) {  
-               System.out.println(i);  
-           }  
-       }  
-   }  
-   public static boolean isPrime(int n) {  
-       if (n <= 1) {  
-           return false;  
-       }  
-       for (int i = 2; i <= Math.sqrt(n); i++) {  
-           if (n % i == 0) {  
-               return false;  
-           }  
-       }  
-       return true;  
-   }  
-}  
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+		
+		
+        Scanner sc = new Scanner(System.in);
+	    int startnum= sc.nextInt();
+	    int lastnum = sc.nextInt();
+	    
+	   for(int num=startnum; num<=lastnum; num++)
+	   {
+	    boolean flag = false;
+	    for (int i = 2; i <= num / 2; i++) {
+	      
+	      if (num % i == 0)   // condition for nonprime number
+	      {
+	        flag = true;
+	        break;
+	      }
+	    }
+
+	    if (!flag)
+	      System.out.println(num + " is a prime number.");
+	    else
+	      System.out.println(num + " is not a prime number.");
+	  } 
+  
+}
+
+}
+
