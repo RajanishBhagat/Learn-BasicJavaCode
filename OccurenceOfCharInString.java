@@ -1,3 +1,5 @@
+How to get distinct characters and their count in a String?
+
 // Java prorgam to count frequencies of 
 // characters in string using Hashmap 
 /**
